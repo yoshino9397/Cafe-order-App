@@ -93,12 +93,16 @@
     color: #d88144;
 }
 
-@media screen and (max-width:480px) {
-  .item:nth-child(2) {
+@media screen and (max-width:640px) {
+  /* .item:nth-child(2) {
     display: none;
   }
 
   .item:nth-child(1) {
     flex: 3;
+  } */
+  .container{
+    width: 100vw;
+    height: 100vh;
   }
 }

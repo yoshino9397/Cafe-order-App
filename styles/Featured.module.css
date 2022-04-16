@@ -45,8 +45,13 @@
   font-size: 110px;
   color:#3e563f
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   .container{
-    height: 50vh;
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .container{
+   height: 30vh;
   }
 }

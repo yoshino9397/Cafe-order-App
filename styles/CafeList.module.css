@@ -22,7 +22,7 @@
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 750px) {
   .title {
     text-align: center;
   }
@@ -30,5 +30,12 @@
   .desc {
     width: 90%;
     text-align: center;
+  }
+}
+@media screen and (max-width: 660px) {
+  .container{
+    left: 0;
+    width: 80vw;
+    margin: 0 auto;
   }
 }

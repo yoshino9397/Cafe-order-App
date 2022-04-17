@@ -24,6 +24,10 @@
   flex: 1;
   padding: 0 20px;
 }
+.title {
+  font-size: 24px;
+  color: #d88144;
+}
 
 .text {
   color: lightgray;
@@ -47,17 +51,17 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 480px) {
+
+@media screen and (max-width: 940px) {
   .container {
     height: auto;
     text-align: center;
   }
-  .item:first-child {
-    display: none;
-  }
-
   .item {
     flex-direction: column;
+  }
+  .item:first-child {
+    display: none;
   }
 
   .title {
@@ -66,5 +70,11 @@
 
   .text {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .container{
+    left: 0;
+    width: 100vw;
   }
 }

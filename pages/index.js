@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import CafeList from "../components/CafeList";
 import Featured from "../components/Featured";
 import Top from "../components/Top";
 import styles from "../styles/Home.module.css";
@@ -14,6 +15,7 @@ export default function Home() {
       </Head>
       <Top />
       <Featured />
+      <CafeList />
     </div>
   );
 }

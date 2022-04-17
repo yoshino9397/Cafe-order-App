@@ -11,7 +11,7 @@ const Footer = () => {
       </div>
       <div className={styles.item}>
         <div className={styles.card}>
-          <h2 className={styles.motto}>DO YOU HAVE A QUESTIONS?</h2>
+          <h2 className={styles.title}>DO YOU HAVE A QUESTIONS?</h2>
           <h3 className={styles.phone}>noreply@yoshino.com</h3>
           <div className={styles.media}>
             <AiFillInstagram />
@@ -43,7 +43,7 @@ const Footer = () => {
           </p>
         </div>
         <div className={styles.card}>
-          <h2 className={styles.motto}>BOOK A TABLE</h2>
+          <h2 className={styles.title}>BOOK A TABLE</h2>
           <p className={styles.text}>+61 (0) 383 766 284</p>
         </div>
       </div>

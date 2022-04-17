@@ -46,7 +46,7 @@ margin:7vh 0 0 10px;
   font-weight: 200;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 660px) {
   .container{
     display: none;
   }

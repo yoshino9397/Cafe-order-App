@@ -23,12 +23,11 @@
 }
 .right {
   flex: 1;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin-bottom: 30px;
+  margin: 20px;
 }
 
 .title {
@@ -56,6 +55,7 @@
   width: 30px;
   height: 30px;
   position: relative;
+  margin: 0 10px;
   cursor: pointer;
 }
 
@@ -114,12 +114,39 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 950px) {
   .container {
     height: auto;
     text-align: center;
     flex-direction: column;
+    margin-top: 15px;
+    position: absolute;
+  }
+  .imgContainer {
+    width: 23vw;
+    height:23vw;
+  }
+  .right {
+    align-items: center;
+  }
+  .title {
+    font-size: 35px;
+    margin-top:5px;
+  }
+
+  .sizes {
+    width: 80%;
+    padding: 0px 20px;
+  }
+
+}
+@media screen and (max-width: 660px) {
+  .container {
+    left: 0;
+    width: 80vw;
+    margin: 0 auto;
     margin-top: 20px;
+    position: relative;
   }
 
   .imgContainer {

@@ -7,6 +7,7 @@
   left: 300px;
   overflow: hidden;
   position: relative;
+  margin:8vh 0;
 }
 
 .arrowContainer {
@@ -50,6 +51,7 @@
 @media screen and (max-width: 800px) {
   .container{
   height: 40vh;
+  margin: 0;
   }
 }
 @media screen and (max-width: 660px) {

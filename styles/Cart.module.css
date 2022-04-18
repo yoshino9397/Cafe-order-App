@@ -17,6 +17,7 @@
 
 .right {
   flex: 1;
+  margin-left: 30px;
 }
 
 .imgContainer {
@@ -45,8 +46,7 @@
   width: 90%;
   max-height: 300px;
   background-color: #333;
-  padding: 50px;
-  padding-top: 10px;
+  padding: 10px 50px 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -58,7 +58,8 @@
 }
 
 .button {
-  height: 30px;
+  height: auto;
+  padding: 1vh 0;
   color: #d88144;
   font-weight: bold;
   cursor: pointer;
@@ -71,19 +72,44 @@
   color: #fff;
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 1160px) {
   .container {
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  .wrapper {
+    width: 70%;
+    max-height: 250px;
+    justify-content: center;
+  }
+  .right{
+    margin-top:5vh;
+    display: flex;
+    justify-content: center;
+  }
+  
+}
+@media screen and (max-width: 910px) {
+  .container {
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
     flex-direction: column;
     padding: 20px;
   }
 
   .table {
+    margin-top: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
   }
-
+  .left{
+  width: calc(100vw - 320px);
+  }
   .trTitle{
     display: none;
   }
@@ -97,31 +123,76 @@
   }
 
   .imgContainer{
+    width: 12vw;
+    height: 12vw;
+  }
+
+  .name,.total{
+    font-size: 17px;
+  }
+
+  .extras,.price,.quantity{
+    font-size: 15px;
+  }
+
+  .price::before{
+    content: "Price: ";
+    font-weight: 200;
+  }
+  .quantity::before{
+    content: "Quantity: ";
+    font-weight: 200;
+  }
+  .total::before{
+    content: "Total: ";
+    font-weight: 200;
+  }
+  .right {
+    margin-top: 10px;
+  }
+  
+  .wrapper{
+    width: 90%;
+    max-height: 200px;
+    padding: 5px 50px 20px;
+  }
+  .title{
+    font-size: 18px;
+  }
+  .totalText{
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .container {
+    left: 0;
+    width: 80vw;
+    margin: 0 auto;
+    position: relative;
+  }
+  .left{
+    width: 80vw;
+}
+  .table {
+    flex-direction: column;
+  }
+  .imgContainer{
     width: 35vw;
     height: 35vw;
   }
 
   .name,.total{
-    font-size: 24px;
+    font-size: 20px;
+    font-weight:300;
   }
 
   .extras,.price,.quantity{
-    font-size: 22px;
+    font-size: 18px;
+    font-weight:200;
   }
-
-  .price::before{
-    content: "Price: ";
-    font-weight: 500;
+  .total{
+    color: #d1411e;
   }
-  .quantity::before{
-    content: "Quantity: ";
-    font-weight: 500;
-  }
-  .total::before{
-    content: "Total: ";
-    font-weight: 500;
-  }
-
   .wrapper{
     width: 100%;
   }

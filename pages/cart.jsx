@@ -26,6 +26,7 @@ const Cart = () => {
                   />
                 </div>
               </td>
+
               <td>
                 <span className={styles.name}>Americano</span>
               </td>

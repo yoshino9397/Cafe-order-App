@@ -1,3 +1,4 @@
+import axios from "axios";
 import Head from "next/head";
 import Image from "next/image";
 import CafeList from "../components/CafeList";
@@ -5,7 +6,7 @@ import Featured from "../components/Featured";
 import Top from "../components/Top";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export default function Home({ cafeList }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -15,7 +16,16 @@ export default function Home() {
       </Head>
       <Top />
       <Featured />
-      <CafeList />
+      <CafeList cafeList={cafeList} />
     </div>
   );
 }
+
+export const getServerSideProps = async () => {
+  const res = await axios.get("http://localhost:3000/api/products");
+  return {
+    props: {
+      cafeList: res.data,
+    },
+  };
+};

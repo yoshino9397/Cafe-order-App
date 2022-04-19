@@ -82,6 +82,7 @@
 
 .cart{
     position: relative;
+    cursor: pointer;
 }
 .cartMobile{
   display:none;
@@ -143,6 +144,7 @@
   .cartMobile{
     display: flex;
     margin-left: 10vw;
+    cursor: pointer;
   }
   .counterMobile{
     position: absolute;

@@ -2,6 +2,8 @@ import styles from "../../styles/Product.module.css";
 import Image from "next/image";
 import { useState } from "react";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../redux/cartSlice";
 import { SiBuymeacoffee } from "react-icons/si";
 
 const Product = ({ cafe }) => {
@@ -9,6 +11,7 @@ const Product = ({ cafe }) => {
   const [size, setSize] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [extras, setExtras] = useState([]);
+  const dispatch = useDispatch();
 
   const changePrice = (number) => {
     setPrice(price + number);
@@ -30,6 +33,10 @@ const Product = ({ cafe }) => {
       changePrice(-option.price);
       setExtras(extras.filter((extra) => extra._id !== option._id));
     }
+  };
+
+  const handleClick = () => {
+    dispatch(addProduct({ ...cafe, extras, price, quantity }));
   };
 
   return (
@@ -80,7 +87,9 @@ const Product = ({ cafe }) => {
             className={styles.quantity}
             onChange={(e) => setQuantity(e.target.value)}
           />
-          <button className={styles.button}>Add to Cart</button>
+          <button className={styles.button} onClick={handleClick}>
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>

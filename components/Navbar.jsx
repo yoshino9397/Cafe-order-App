@@ -6,6 +6,8 @@ import { CgShoppingCart, CgMenu } from "react-icons/cg";
 
 const Navbar = () => {
   const quantity = useSelector((state) => state.cart.quantity);
+
+  const handleProduct = () => {};
   return (
     <>
       <div className={styles.container}>
@@ -24,9 +26,13 @@ const Navbar = () => {
         </div>
         <div className={styles.item}>
           <ul className={styles.list}>
-            <li className={styles.listItem}>Homepage</li>
-            <li className={styles.listItem}>Products</li>
-            <li className={styles.listItem}>Menu</li>
+            <Link href="/" passHref>
+              <li className={styles.listItem}>Homepage</li>
+            </Link>
+            <Link href="/menu" passHref>
+              <li className={styles.listItem}>Menu</li>
+            </Link>
+
             <li className={styles.listItem}>Events</li>
             <li className={styles.listItem}>Blog</li>
             <li className={styles.listItem}>Contact</li>
@@ -35,12 +41,8 @@ const Navbar = () => {
         <Link href="/cart" passHref>
           <div className={styles.item}>
             <div className={styles.cart}>
-              <CgShoppingCart fontSize="45px" color="white" />
+              <CgShoppingCart fontSize="42px" color="white" />
               <div className={styles.counter}>{quantity}</div>
-            </div>
-            <div className={styles.cartMobile}>
-              <CgShoppingCart fontSize="35px" color="white" />
-              <div className={styles.counterMobile}>{quantity}</div>
             </div>
           </div>
         </Link>

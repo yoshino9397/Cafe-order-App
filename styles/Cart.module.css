@@ -70,6 +70,21 @@
   color: #fff;
 }
 
+.paymentMethods {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.payButton {
+  padding: 10px 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  background-color: white;
+  color: teal;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 1160px) {
   .container {
     height: auto;

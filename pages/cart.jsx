@@ -10,6 +10,7 @@ import {
 import axios from "axios";
 import { useRouter } from "next/router";
 import { reset } from "../redux/cartSlice";
+import OrderDetail from "../components/OrderDetail";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
@@ -46,7 +47,7 @@ const Cart = () => {
           currency: currency,
         },
       });
-    }, [currency, showSpinner]);
+    }, [currency, showSpinner, dispatch, options]);
 
     return (
       <>
@@ -160,7 +161,7 @@ const Cart = () => {
             <div className={styles.paymentMethods}>
               <button
                 className={styles.payButton}
-                // onClick={() => setCash(true)}
+                onClick={() => setCash(true)}
               >
                 CASH ON DELIVERY
               </button>
@@ -183,6 +184,7 @@ const Cart = () => {
           )}
         </div>
       </div>
+      {cash && <OrderDetail total={cart.total} createOrder={createOrder} />}
     </div>
   );
 };

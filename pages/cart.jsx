@@ -160,7 +160,7 @@ const Cart = () => {
             <div className={styles.paymentMethods}>
               <button
                 className={styles.payButton}
-                // onClick={() => setCash(true)}
+                onClick={() => setCash(true)}
               >
                 CASH ON DELIVERY
               </button>
@@ -183,7 +183,7 @@ const Cart = () => {
           )}
         </div>
       </div>
-      {/* {cash && <OrderDetail total={cart.total} createOrder={createOrder} />} */}
+      {cash && <OrderDetail total={cart.total} createOrder={createOrder} />}
     </div>
   );
 };

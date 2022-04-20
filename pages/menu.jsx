@@ -1,10 +1,10 @@
+import axios from "axios";
 import styles from "../styles/Menu.module.css";
 import CafeCard from "../components/CafeCard";
-import axios from "axios";
 
 const Menu = ({ cafeList }) => {
   return (
-    <div className={styles.container} >
+    <div className={styles.container}>
       <h1 className={styles.title}>THE BEST COFFEE IN TOWN</h1>
       <p className={styles.desc}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit arcu

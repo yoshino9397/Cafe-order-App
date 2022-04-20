@@ -1,7 +1,8 @@
-import styles from "../styles/CafeList.module.css";
-import CafeCard from "./CafeCard";
+import styles from "../styles/Menu.module.css";
+import CafeCard from "../components/CafeCard";
+import axios from "axios";
 
-const CafeList = ({ cafeList }) => {
+const Menu = ({ cafeList }) => {
   return (
     <div className={styles.container} >
       <h1 className={styles.title}>THE BEST COFFEE IN TOWN</h1>
@@ -19,4 +20,13 @@ const CafeList = ({ cafeList }) => {
   );
 };
 
-export default CafeList;
+export const getServerSideProps = async () => {
+  const res = await axios.get("http://localhost:3000/api/products");
+  return {
+    props: {
+      cafeList: res.data,
+    },
+  };
+};
+
+export default Menu;

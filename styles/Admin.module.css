@@ -1,0 +1,53 @@
+.container {
+  width: calc(100vw - 300px);
+  left: 300px;
+  margin-top: -100vh;
+  position: relative;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+.item{
+  width: 90%;
+  margin: 0 auto;
+}
+.table {
+  width: 100%;
+  border-spacing: 0.7vw;
+  text-align: left;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.button:first-child {
+  background-color: teal;
+  margin-right: 10px;
+}
+
+.button:last-child {
+  background-color: crimson;
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    padding:30px;
+  }
+  .item{
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 760px) {
+  .container {
+    padding:10px;
+  }
+  .item {
+    width: 70%;
+  }
+}

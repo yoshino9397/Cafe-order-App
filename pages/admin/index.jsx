@@ -103,7 +103,10 @@ const Index = ({ orders, products }) => {
                 </td>
                 <td>{status[order.status]}</td>
                 <td>
-                  <button onClick={() => handleStatus(order._id)}>
+                  <button
+                    onClick={() => handleStatus(order._id)}
+                    className={styles.actionButton}
+                  >
                     Next Stage
                   </button>
                 </td>

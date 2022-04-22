@@ -3,12 +3,12 @@ import CafeCard from "./CafeCard";
 
 const CafeList = ({ cafeList }) => {
   return (
-    <div className={styles.container} >
+    <div className={styles.container}>
       <h1 className={styles.title}>THE BEST COFFEE IN TOWN</h1>
       <p className={styles.desc}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit arcu
-        in pretium molestie. Interdum et malesuada fames acme. Lorem ipsum dolor
-        sit amet, consectetur adipiscing elit.
+        Coffee is our soul. Focusing on the minute; being meticulous over every
+        detail. Everything we do is considered to give an unparalleled
+        experience of simplicity with substance.
       </p>
       <div className={styles.wrapper}>
         {cafeList.map((cafe) => (

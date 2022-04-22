@@ -53,10 +53,22 @@
   height: 40vh;
   margin: 0;
   }
+  .desc{
+    height: 40vh;
+    width: 60vw;
+    font-size: 60px;
+    color:rgb(84, 130, 86);
+  }
 }
 @media screen and (max-width: 660px) {
   .container{
     width: 100vw;
     left: 0;
+  }
+  .desc{
+    height: 40vh;
+    width: 100vw;
+    font-size: 80px;
+    color:rgb(84, 130, 86);
   }
 }

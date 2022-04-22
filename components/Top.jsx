@@ -10,7 +10,7 @@ const Top = () => {
             <br />
             our cafe
           </h1>
-          <h2 className={styles.desc}>Good coffee with you</h2>
+          <h2 className={styles.desc}>Life is short, stay awake for it.</h2>
         </div>
         <div className={styles.item}>
           <h2 className={styles.desc}>WE ARE OPEN</h2>

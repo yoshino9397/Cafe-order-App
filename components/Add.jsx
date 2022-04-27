@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styles from "../styles/Add.module.css";
 import axios from "axios";
-import { useRouter } from "next/router";
 import { MdCancel } from "react-icons/md";
 
 const Add = ({ setClose }) => {

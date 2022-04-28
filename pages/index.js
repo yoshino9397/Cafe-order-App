@@ -6,12 +6,11 @@ import AddButton from "../components/AddButton";
 import CafeList from "../components/CafeList";
 import Featured from "../components/Featured";
 import Top from "../components/Top";
-import styles from "../styles/Home.module.css";
 
 export default function Home({ cafeList, admin }) {
   const [close, setClose] = useState(true);
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Cafe Lynx in NY</title>
         <meta name="description" content="Good coffee makes your day" />
@@ -33,7 +32,7 @@ export const getServerSideProps = async (ctx) => {
   if (myCookie.token === process.env.TOKEN) {
     admin = true;
   }
-  const res = await axios.get("http://localhost:3000/api/products");
+  const res = await axios.get(`${process.env.URL}/api/products`);
   return {
     props: {
       cafeList: res.data,
